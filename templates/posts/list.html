@@ -1,0 +1,20 @@
+{% extends 'base'.html' %}
+
+
+{% block title %}Posts{% endblock title %}
+
+{% block content %}
+
+<h1>Posts</h1>
+{% for post in post_list %}
+<div class="card" style="width: 18rem;">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{ post.title }}/h5>
+      <p class="card-text">{{ post.body |truncatechar: 64}}</p>
+      <a href="{% url 'detail' post.id %}s">Continue reading...</a>
+    </div>
+  </div>
+  <br />
+  {% endfor %}
+{% endblock content %}
