@@ -1,14 +1,14 @@
 from django.views.generic import(
     ListView,
     DetailView,
-    Createview,
     UpdateView,
     DeleteView
 )
+from django.views.generic.edit import CreateView
 from .models import Post
 from django.urls import reverse_lazy
 from django.contrib.auth.mixins import (
-    LoginRequiredMixin 
+    LoginRequiredMixin,
     UserPassesTestMixin,
 )
 
