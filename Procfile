@@ -1,0 +1,1 @@
+web: gunicorn onfig.wsgi --log-file -
