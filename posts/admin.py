@@ -1,5 +1,5 @@
 from django.contrib import admin
-from.models import Post
+from.models import Post, Status
 
 class PostAdmin(admin.ModelAdmin):
     list_display =[
@@ -7,3 +7,4 @@ class PostAdmin(admin.ModelAdmin):
     ]
 
 admin.site.register(Post, PostAdmin)
+admin.site.register(Status)
